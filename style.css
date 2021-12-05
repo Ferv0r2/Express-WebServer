@@ -1,0 +1,141 @@
+/* 반응형 */
+
+:root {
+    --text-color: #f0f4f5;
+    --background-color:#263343
+    --accent-color: #d49466
+}
+
+
+body {
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #263343;
+    padding: 8px 12px;
+}
+
+.navbar_logo {
+    font-size: 24px;
+    color: #fff;
+}
+
+.navbar_logo i {
+    color: #d49466;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+    background-color: #d49466;
+    border-radius: 4px;
+}
+
+.navbar_icons {
+    list-style: none;
+    color: #fff;
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
+
+.nav_toggleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
+}
+
+.intro_bg {
+    background-image: url(image/intro.png);
+    width: 100%;
+    height: 718px;
+}
+  
+  footer {
+    display: flex;
+    padding: 30px;
+    background: #1f1f1f;
+  }
+  
+  footer > div:first-child {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+  }
+  
+  footer > div:last-child {
+    flex: 3;
+    color: #fff;
+  }
+  
+
+
+@media screen and (max-width: 768px){
+    .navbar {
+        position: sticky;
+        top: 0px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar_menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_icons {
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav_toggleBtn {
+        display: block;
+    }
+
+    /* .nav_toggleBtn:hover{
+        animation: ani 1s linear infinite alternate;
+    }
+    @keyframes ani{
+        from{transform: scale(1) translate(0);}
+        to{transform: scale(1.5) translate(20%);}
+    } */
+
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+}
