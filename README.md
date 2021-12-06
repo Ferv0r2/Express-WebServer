@@ -15,7 +15,7 @@ Library :
 npm install express --save // express 설치 (--save는 package.json 파일 내의 dependencies 목록에 추가)
 npm install ejs
 npm install mysql --save
-npm install express-generagtor -g
+npm install express-generagtor -g // 애플리케이션 생성 도구 (express -h 옵션으로 명령 확인)
 
 ---
 
