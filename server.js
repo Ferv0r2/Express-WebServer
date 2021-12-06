@@ -1,22 +1,22 @@
-const express = require('express')
-const app = express()
+const express = require("express");
+const app = express();
 
 const server = app.listen(3000, () => {
-    console.log('Start Server : localhost:3000')
-})
+  console.log("Start Server : localhost:3000");
+});
 
-app.set('views', __dirname + '/views');
-app.set('View Engine', 'ejs')
-app.engine('html', require('ejs').renderFile)
+app.set("views", __dirname + "/views");
+app.set("View Engine", "ejs");
+app.engine("html", require("ejs").renderFile);
 
 // route, routing
-app.get('/', function(req, res) {
-    res.render('index.html')
-})
+app.get("/", function (req, res) {
+  res.render("index.html");
+});
 
-app.get('/about', function(req, res) {
-    res.send('about')
-})
+app.get("/about", function (req, res) {
+  res.send("about");
+});
 
 // var mysql = require('mysql');
 // const { blob } = require('stream/consumers');
