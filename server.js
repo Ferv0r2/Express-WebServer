@@ -5,9 +5,14 @@ const server = app.listen(3000, () => {
   console.log("Start Server : localhost:3000");
 });
 
+// HTML 적용
 app.set("views", __dirname + "/views");
 app.set("View Engine", "ejs");
 app.engine("html", require("ejs").renderFile);
+
+// CSS 적용
+app.use(express.static('public'));
+
 
 // route, routing
 app.get("/", function (req, res) {
